@@ -8,7 +8,7 @@ ENV DOC_ROOT /home/jupyter/code
 RUN useradd --create-home --shell /bin/bash jupyter 
 RUN apt-get update \
 	&& python3 -m pip install --upgrade pip \
-	&& python -m pip install numpy scipy matplotlib ipython jupyter pandas sympy nose
+	&& python3 -m pip install numpy scipy matplotlib ipython jupyter pandas sympy nose
 
 WORKDIR ${DOC_ROOT}
 
